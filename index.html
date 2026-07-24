@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="zh-CN" class="no-js" data-lang="zh" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#073b57">
+
+  <title>朱贵勋 · Guixun Zhu | 计算海洋水动力学与海洋可再生能源</title>
+  <meta name="description" content="朱贵勋（Guixun Zhu）的个人学术主页：计算流体力学、光滑粒子流体动力学、强非线性水波、波浪—结构相互作用、海洋可再生能源与物理智能。">
+  <meta name="keywords" content="朱贵勋, Guixun Zhu, SPH, Computational Fluid Dynamics, Marine Renewable Energy, Wave Energy, Tidal Energy, Floating Wind">
+  <meta name="author" content="Guixun Zhu">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="朱贵勋 · Guixun Zhu">
+  <meta property="og:description" content="Computational Marine Hydrodynamics · Marine Renewable Energy · Physics-informed AI">
+  <meta property="og:image" content="assets/images/og-cover.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <script>
+    document.documentElement.classList.replace('no-js', 'js');
+    try {
+      const savedTheme = localStorage.getItem('gz-theme');
+      const dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.dataset.theme = savedTheme || (dark ? 'dark' : 'light');
+      const savedLang = localStorage.getItem('gz-lang');
+      if (savedLang === 'en' || savedLang === 'zh') {
+        document.documentElement.dataset.lang = savedLang;
+        document.documentElement.lang = savedLang === 'zh' ? 'zh-CN' : 'en';
+      }
+    } catch (_) {}
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Guixun Zhu",
+    "alternateName": "朱贵勋",
+    "jobTitle": "Assistant Professor and Master's Supervisor",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "Dalian University of Technology"
+    },
+    "alumniOf": [
+      {"@type": "CollegeOrUniversity", "name": "University of Plymouth"},
+      {"@type": "CollegeOrUniversity", "name": "Dalian University of Technology"}
+    ],
+    "knowsAbout": [
+      "Computational fluid dynamics",
+      "Smoothed particle hydrodynamics",
+      "Wave-structure interaction",
+      "Marine renewable energy",
+      "Physics-informed artificial intelligence"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">
+    <span class="lang-zh">跳到主要内容</span>
+    <span class="lang-en">Skip to content</span>
+  </a>
+
+  <header class="site-header" id="top">
+    <div class="nav-shell">
+      <a class="brand" href="#home" aria-label="Guixun Zhu homepage">
+        <span class="brand-mark" aria-hidden="true">GZ</span>
+        <span class="brand-text">
+          <strong>朱贵勋</strong>
+          <small>Guixun Zhu</small>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false">
+        <span class="sr-only">
+          <span class="lang-zh">打开导航</span>
+          <span class="lang-en">Open navigation</span>
+        </span>
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="#about"><span class="lang-zh">简介</span><span class="lang-en">About</span></a>
+        <a href="#research"><span class="lang-zh">研究</span><span class="lang-en">Research</span></a>
+        <a href="#publications"><span class="lang-zh">论文</span><span class="lang-en">Publications</span></a>
+        <a href="#projects"><span class="lang-zh">项目</span><span class="lang-en">Projects</span></a>
+        <a href="#mentoring"><span class="lang-zh">培养</span><span class="lang-en">Mentoring</span></a>
+        <a href="#contact"><span class="lang-zh">联系</span><span class="lang-en">Contact</span></a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-button language-toggle" type="button" aria-label="Switch language" aria-pressed="false">
+          <span class="lang-zh">EN</span>
+          <span class="lang-en">中文</span>
+        </button>
+        <button class="icon-button theme-toggle" type="button" aria-label="Toggle colour theme" aria-pressed="false">
+          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.41M17.66 6.34l1.41-1.41"></path>
+          </svg>
+          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="home">
+      <div class="hero-orb hero-orb-one" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-two" aria-hidden="true"></div>
+      <div class="wave-lines" aria-hidden="true"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">
+            <span class="eyebrow-dot" aria-hidden="true"></span>
+            <span class="lang-zh">计算海洋水动力学 · 海洋可再生能源</span>
+            <span class="lang-en">Computational Marine Hydrodynamics · Marine Renewable Energy</span>
+          </p>
+
+          <h1>
+            <span class="hero-name-zh">朱贵勋</span>
+            <span class="hero-name-en">Guixun Zhu</span>
+          </h1>
+
+          <p class="hero-title">
+            <span class="lang-zh">助理教授 · 硕士生导师</span>
+            <span class="lang-en">Assistant Professor · Master's Supervisor</span>
+          </p>
+
+          <p class="hero-lead lang-zh">
+            聚焦高精度光滑粒子流体动力学、强非线性水波与波浪—结构相互作用，
+            面向波浪能、潮流能和漂浮式风能装备，贯通“数值模型—能源装置—智能预测与控制”。
+          </p>
+          <p class="hero-lead lang-en">
+            Developing high-fidelity smoothed particle hydrodynamics for strongly nonlinear waves and
+            wave–structure interaction, with applications to wave, tidal and floating-wind energy systems,
+            physics-guided prediction and intelligent control.
+          </p>
+
+          <div class="affiliation-line">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V9l7-4 7 4v12M9 21v-6h6v6M8 11h.01M12 11h.01M16 11h.01"></path></svg>
+            <span class="lang-zh" data-affiliation-zh>大连理工大学船舶工程学院</span>
+            <span class="lang-en" data-affiliation-en>School of Naval Architecture and Ocean Engineering, Dalian University of Technology</span>
+          </div>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#research">
+              <span class="lang-zh">查看研究方向</span>
+              <span class="lang-en">Explore research</span>
+              <span aria-hidden="true">→</span>
+            </a>
+            <a class="button button-secondary" href="#publications">
+              <span class="lang-zh">代表性论文</span>
+              <span class="lang-en">Selected publications</span>
+            </a>
+          </div>
+
+          <ul class="topic-pills" aria-label="Research topics">
+            <li>SPH</li>
+            <li>CFD</li>
+            <li>Wave Energy</li>
+            <li>Tidal Energy</li>
+            <li>Floating Wind</li>
+            <li>Physics-informed AI</li>
+          </ul>
+        </div>
+
+        <aside class="hero-profile reveal" aria-label="Profile summary">
+          <div class="profile-image-wrap">
+            <img src="assets/images/profile.jpg" alt="朱贵勋 / Guixun Zhu profile placeholder" width="900" height="900">
+            <div class="profile-badge">
+              <span class="lang-zh">海洋工程</span>
+              <span class="lang-en">Ocean Engineering</span>
+            </div>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-card">
+              <strong>23</strong>
+              <span class="lang-zh">学术论文</span>
+              <span class="lang-en">Publications</span>
+            </div>
+            <div class="stat-card">
+              <strong>18</strong>
+              <span class="lang-zh">SCI 论文</span>
+              <span class="lang-en">SCI papers</span>
+            </div>
+            <div class="stat-card">
+              <strong>12</strong>
+              <span class="lang-zh">第一/通讯 SCI</span>
+              <span class="lang-en">Lead-author SCI</span>
+            </div>
+            <div class="stat-card">
+              <strong>400+</strong>
+              <span class="lang-zh">论文引用</span>
+              <span class="lang-en">Citations</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <a class="scroll-cue" href="#about" aria-label="Scroll to About">
+        <span></span>
+      </a>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-kicker">01 · PROFILE</p>
+          <h2><span class="lang-zh">个人简介</span><span class="lang-en">About</span></h2>
+          <p class="lang-zh">以应用数学、物理机理、高性能计算和工程需求为交叉基础，服务深远海能源供给与装备安全。</p>
+          <p class="lang-en">Bridging applied mathematics, flow physics, high-performance computing and engineering design for offshore energy and safety.</p>
+        </div>
+
+        <div class="about-grid">
+          <article class="about-card prose reveal">
+            <p class="lang-zh">
+              朱贵勋，助理教授、硕士生导师。本科及硕士阶段均就读于大连理工大学船舶工程学院，
+              博士毕业于英国普利茅斯大学工程、计算与数学学院，博士阶段师从 Deborah Greaves 教授、
+              郑思明教授和 Jason Hughes 博士。2023—2025 年在新加坡国立大学设计与工程学院从事博士后研究，
+              合作导师为 B. C. Khoo 教授和 Yuzhu Pearl Li 教授。
+            </p>
+            <p class="lang-en">
+              Guixun Zhu is an Assistant Professor and Master's Supervisor. He received his bachelor's and
+              master's education from the School of Naval Architecture and Ocean Engineering at Dalian University
+              of Technology, and completed his PhD in the School of Engineering, Computing and Mathematics at the
+              University of Plymouth under Deborah Greaves, Siming Zheng and Jason Hughes. From 2023 to 2025,
+              he conducted postdoctoral research in the College of Design and Engineering at the National University
+              of Singapore with B. C. Khoo and Yuzhu Pearl Li.
+            </p>
+            <p class="lang-zh">
+              研究主要涉及计算流体力学、光滑粒子流体动力学、强非线性水波与波浪—结构相互作用，
+              以及风能、波浪能和潮流能装置的水动力性能。相关成果发表于
+              <em>Journal of Computational Physics</em>、<em>Computer Methods in Applied Mechanics and Engineering</em>、
+              <em>Energy</em>、<em>Renewable Energy</em> 和 <em>Ocean Engineering</em> 等期刊。
+            </p>
+            <p class="lang-en">
+              His research spans computational fluid dynamics, smoothed particle hydrodynamics, strongly nonlinear
+              water waves and wave–structure interaction, and the hydrodynamic performance of offshore wind, wave and
+              tidal energy devices. His work has appeared in journals including <em>Journal of Computational Physics</em>,
+              <em>Computer Methods in Applied Mechanics and Engineering</em>, <em>Energy</em>, <em>Renewable Energy</em>
+              and <em>Ocean Engineering</em>.
+            </p>
+          </article>
+
+          <div class="timeline reveal" aria-label="Education and appointments">
+            <article class="timeline-item">
+              <span class="timeline-marker" aria-hidden="true"></span>
+              <div>
+                <span class="timeline-date lang-zh">现任</span>
+                <span class="timeline-date lang-en">Current</span>
+                <h3><span class="lang-zh">助理教授、硕士生导师</span><span class="lang-en">Assistant Professor & Master's Supervisor</span></h3>
+                <p class="lang-zh">大连理工大学船舶工程学院</p>
+                <p class="lang-en">School of Naval Architecture and Ocean Engineering, Dalian University of Technology</p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <span class="timeline-marker" aria-hidden="true"></span>
+              <div>
+                <span class="timeline-date">2023—2025</span>
+                <h3><span class="lang-zh">博士后研究员</span><span class="lang-en">Postdoctoral Researcher</span></h3>
+                <p class="lang-zh">新加坡国立大学设计与工程学院</p>
+                <p class="lang-en">College of Design and Engineering, National University of Singapore</p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <span class="timeline-marker" aria-hidden="true"></span>
+              <div>
+                <span class="timeline-date">PhD</span>
+                <h3><span class="lang-zh">工程、计算与数学学院</span><span class="lang-en">School of Engineering, Computing and Mathematics</span></h3>
+                <p class="lang-zh">英国普利茅斯大学</p>
+                <p class="lang-en">University of Plymouth, United Kingdom</p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <span class="timeline-marker" aria-hidden="true"></span>
+              <div>
+                <span class="timeline-date">BEng · MEng</span>
+                <h3><span class="lang-zh">船舶工程学院</span><span class="lang-en">School of Naval Architecture and Ocean Engineering</span></h3>
+                <p class="lang-zh">大连理工大学</p>
+                <p class="lang-en">Dalian University of Technology</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tinted" id="research">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-kicker">02 · RESEARCH</p>
+          <h2><span class="lang-zh">研究方向</span><span class="lang-en">Research</span></h2>
+          <p class="lang-zh">围绕深远海能源供给、复杂海洋环境数值建模与人工智能赋能三条主线展开。</p>
+          <p class="lang-en">Three connected themes: offshore energy supply, high-fidelity modelling of complex marine environments, and AI-enabled prediction and control.</p>
+        </div>
+
+        <div class="research-pillars">
+          <article class="pillar-card reveal">
+            <span class="pillar-number">01</span>
+            <h3><span class="lang-zh">深远海能源系统</span><span class="lang-en">Offshore energy systems</span></h3>
+            <p class="lang-zh">探索波浪能、潮流能与漂浮式风能的协同利用及安全、可靠、可持续的能源供给方案。</p>
+            <p class="lang-en">Integrated wave, tidal and floating-wind concepts for safe, reliable and sustainable offshore power supply.</p>
+          </article>
+          <article class="pillar-card reveal">
+            <span class="pillar-number">02</span>
+            <h3><span class="lang-zh">高精度数值建模</span><span class="lang-en">High-fidelity modelling</span></h3>
+            <p class="lang-zh">发展高阶 SPH、多分辨率并行与跨尺度耦合方法，解析破碎波、极限载荷和装备生还能力。</p>
+            <p class="lang-en">High-order SPH, parallel multi-resolution algorithms and multi-scale coupling for breaking waves, extreme loads and survivability.</p>
+          </article>
+          <article class="pillar-card reveal">
+            <span class="pillar-number">03</span>
+            <h3><span class="lang-zh">物理智能与控制</span><span class="lang-en">Physics-guided intelligence</span></h3>
+            <p class="lang-zh">融合物理模型与人工智能，服务极限载荷预测、控制优化、模型加速和工程决策。</p>
+            <p class="lang-en">Combining physics and machine learning for extreme-load forecasting, control, model acceleration and engineering decisions.</p>
+          </article>
+        </div>
+
+        <div class="research-grid">
+          <article class="research-card reveal">
+            <figure>
+              <img src="assets/images/research-sph.webp" loading="lazy" width="1600" height="711" alt="SPH 高阶模型、并行框架、耦合模型与海浪冲击模拟 / High-order SPH, parallel and coupled modelling">
+            </figure>
+            <div class="research-card-body">
+              <div class="research-tags"><span>SPH</span><span>HPC</span><span>Multi-resolution</span></div>
+              <h3><span class="lang-zh">数值模型算法与软件</span><span class="lang-en">Numerical methods and software</span></h3>
+              <p class="lang-zh">发展迭代高阶 SPH 与高阶边界方法，在不规则粒子分布下实现最高四阶收敛；建立 MPI 动态负载均衡、多分辨率、局部时间步及 SPH–OceanWave3D 双向耦合框架。</p>
+              <p class="lang-en">Iterative high-order SPH and boundary treatments achieve up to fourth-order convergence on irregular particles, complemented by MPI dynamic load balancing, multi-resolution, local time stepping and two-way SPH–OceanWave3D coupling.</p>
+            </div>
+          </article>
+
+          <article class="research-card reveal">
+            <figure>
+              <img src="assets/images/research-owc.webp" loading="lazy" width="1600" height="907" alt="振荡水柱波浪能装置、气动模型和数值验证 / Oscillating water column wave energy research">
+            </figure>
+            <div class="research-card-body">
+              <div class="research-tags"><span>OWC</span><span>Wave Energy</span><span>PTO</span></div>
+              <h3><span class="lang-zh">振荡水柱波浪能装置</span><span class="lang-en">Oscillating-water-column wave energy</span></h3>
+              <p class="lang-zh">针对防波堤集成式与浮式 OWC，建立单相气动模型，在不显式求解空气相的条件下统一模拟气室压力、自由液面和 PTO 阻尼效应。</p>
+              <p class="lang-en">A single-phase pneumatic formulation unifies chamber pressure, free-surface motion and PTO damping without explicitly resolving the air phase, supporting fixed and floating OWC simulations.</p>
+            </div>
+          </article>
+
+          <article class="research-card reveal">
+            <figure>
+              <img src="assets/images/research-point-absorber.webp" loading="lazy" width="1600" height="937" alt="点吸收式波浪能装置聚焦波试验与系泊响应 / Point-absorber experiments and mooring response">
+            </figure>
+            <div class="research-card-body">
+              <div class="research-tags"><span>Point Absorber</span><span>Experiments</span><span>Mooring</span></div>
+              <h3><span class="lang-zh">点吸收式波浪能装置</span><span class="lang-en">Point-absorber wave energy</span></h3>
+              <p class="lang-zh">通过聚焦波水池试验研究波幅、峰值频率与 PTO 阻尼对运动和系泊载荷的影响，并推进因果波浪预报、闭环控制、硬件在环和水池验证。</p>
+              <p class="lang-en">Focused-wave basin experiments quantify how wave amplitude, peak frequency and PTO damping affect motion and mooring loads, informing causal forecasting, closed-loop control and hardware-in-the-loop validation.</p>
+            </div>
+          </article>
+
+          <article class="research-card reveal">
+            <figure>
+              <img src="assets/images/research-tidal.webp" loading="lazy" width="1600" height="835" alt="波流耦合潮流能机组 CFD 与疲劳分析 / CFD and fatigue analysis of a tidal turbine under waves and currents">
+            </figure>
+            <div class="research-card-body">
+              <div class="research-tags"><span>Tidal Energy</span><span>OpenFOAM</span><span>Fatigue</span></div>
+              <h3><span class="lang-zh">潮流能装置</span><span class="lang-en">Tidal-energy devices</span></h3>
+              <p class="lang-zh">基于 OpenFOAM 建立波—流作用下潮流能机组高保真 CFD–疲劳耦合框架，结合频带归因与雨流循环分解揭示非定常载荷重分配机制。</p>
+              <p class="lang-en">A high-fidelity OpenFOAM CFD–fatigue workflow combines spectral attribution and rainflow-cycle decomposition to reveal wave-induced redistribution of unsteady turbine loads.</p>
+            </div>
+          </article>
+
+          <article class="research-card reveal">
+            <figure>
+              <img src="assets/images/research-floating-wind.webp" loading="lazy" width="1600" height="1153" alt="漂浮式风机平台水池试验、数值模拟与系泊系统 / Floating-wind platform experiments and simulations">
+            </figure>
+            <div class="research-card-body">
+              <div class="research-tags"><span>Floating Wind</span><span>Extreme Seas</span><span>Survivability</span></div>
+              <h3><span class="lang-zh">漂浮式风力发电平台</span><span class="lang-en">Floating offshore wind</span></h3>
+              <p class="lang-zh">面向台风、聚焦波、破碎波和异常巨浪，发展基于 SPH 的极限海况高保真生还能力预测框架，耦合平台运动、气动载荷、系泊与流固响应。</p>
+              <p class="lang-en">An SPH-based extreme-sea survivability framework couples six-degree-of-freedom platform motion, aerodynamic loading, mooring response and fluid–structure interaction under typhoons, focused and breaking waves.</p>
+            </div>
+          </article>
+
+          <article class="research-card reveal">
+            <figure>
+              <img src="assets/images/research-ai.webp" loading="lazy" width="1600" height="533" alt="物理引导神经网络框架和极限载荷预测 / Physics-guided neural network and extreme-load prediction">
+            </figure>
+            <div class="research-card-body">
+              <div class="research-tags"><span>AI</span><span>Extreme Loads</span><span>Safe Control</span></div>
+              <h3><span class="lang-zh">人工智能相关技术</span><span class="lang-en">Physics-informed artificial intelligence</span></h3>
+              <p class="lang-zh">将波面、浮体运动、PTO 状态、连接系统、接触状态与历史载荷等物理信息引入预测模型，提升高风险尾部事件识别和短时极限峰值载荷预测能力。</p>
+              <p class="lang-en">Wave elevation, body motion, PTO state, connections, contact conditions and load history are embedded in forecasting models to improve short-horizon extreme-peak prediction and high-risk tail-event detection.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="publications">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-kicker">03 · PUBLICATIONS</p>
+          <h2><span class="lang-zh">代表性论文</span><span class="lang-en">Selected publications</span></h2>
+          <p class="lang-zh">以下为材料中列出的期刊与会议论文。姓名加粗表示本人。</p>
+          <p class="lang-en">Journal and conference papers listed in the supplied profile. Guixun Zhu is shown in bold.</p>
+        </div>
+
+        <ol class="publication-list">
+          <li class="publication-item reveal">
+            <article>
+              <div class="publication-meta"><time datetime="2026">2026</time><span>Energy</span></div>
+              <p><strong>Guixun Zhu</strong>, Xiangfeng Lin, Yuzhu Pearl Li. Performance and fatigue analysis of a tidal turbine under wave–current interactions. <em>Energy</em>, 356: 141232.</p>
+              <a class="doi-link" href="https://doi.org/10.1016/j.energy.2026.141232" target="_blank" rel="noopener noreferrer">DOI ↗</a>
+            </article>
+          </li>
+          <li class="publication-item reveal">
+            <article>
+              <div class="publication-meta"><time datetime="2025">2025</time><span>CMAME</span></div>
+              <p><strong>Guixun Zhu</strong>, Siming Zheng, Yaru Ren, Yuzhu Pearl Li. Iterative high-order weakly compressible smoothed particle hydrodynamics model for viscous fluid flows. <em>Computer Methods in Applied Mechanics and Engineering</em>, 447: 118339.</p>
+              <a class="doi-link" href="https://doi.org/10.1016/j.cma.2025.118339" target="_blank" rel="noopener noreferrer">DOI ↗</a>
+            </article>
+          </li>
+          <li class="publication-item reveal">
+            <article>
+              <div class="publication-meta"><time datetime="2025">2025</time><span>Renewable Energy</span></div>
+              <p>Siming Zheng, Haojie Zheng, Simone Michele, <strong>Guixun Zhu</strong>, Yeaw Chu Lee, Deborah Greaves. Wave power extraction from a U-shaped oscillating water column consisting of a flexible bottom-standing front wall. <em>Renewable Energy</em>, 250: 123173.</p>
+              <a class="doi-link" href="https://doi.org/10.1016/j.renene.2025.123173" target="_blank" rel="noopener noreferrer">DOI ↗</a>
+            </article>
+          </li>
+          <li class="publication-item reveal">
+            <article>
+              <div class="publication-meta"><time datetime="2024">2024</time><span>JCP</span></div>
+              <p><strong>Guixun Zhu</strong>, Yongdong Cui, Boo Cheong Khoo, Siming Zheng, Zongbing Yu, Yelin Gao. A parallel multi-resolution Smoothed Particle Hydrodynamics model with local time stepping. <em>Journal of Computational Physics</em>, 508: 113039.</p>
+              <a class="doi-link" href="https://doi.org/10.1016/j.jcp.2024.113039" target="_blank" rel="noopener noreferrer">DOI ↗</a>
+            </article>
+          </li>
+          <li class="publication-item reveal">
+            <article>
+              <div class="publication-meta"><time datetime="2024">2024</time><span>JMSE</span></div>
+              <p>Da Hui, Guangyao Wang, Yilin Huang, <strong>Guixun Zhu</strong>, Wenming Li. Numerical Simulation of a Marine Landslide in Gas Hydrate-Bearing Sediments Using L-GSM. <em>Journal of Marine Science and Engineering</em>, 12(12): 2274.</p>
+              <a class="doi-link" href="https://doi.org/10.3390/jmse12122274" target="_blank" rel="noopener noreferrer">DOI ↗</a>
+            </article>
+          </li>
+          <li class="publication-item reveal">
+            <article>
+              <div class="publication-meta"><time datetime="2023">2023</time><span>Computers &amp; Fluids</span></div>
+              <p><strong>Guixun Zhu</strong>, Jason Hughes, Siming Zheng, Deborah Greaves. Development of a two-dimensional coupled smoothed particle hydrodynamics model and its application to nonlinear wave simulations. <em>Computers &amp; Fluids</em>, 266: 106044.</p>
+              <a class="doi-link" href="https://doi.org/10.1016/j.compfluid.2023.106044" target="_blank" rel="noopener noreferrer">DOI ↗</a>
+            </article>
+          </li>
+          <li class="publication-item reveal">
+            <article>
+              <div class="publication-meta"><time datetime="2023">2023</time><span>Ocean Engineering</span></div>
+              <p><strong>Guixun Zhu</strong>, Zahra Shahroozi, Siming Zheng, Malin Göteman, Jens Engström, Deborah Greaves. Experimental study of interactions between focused waves and a point absorber wave energy converter. <em>Ocean Engineering</em>, 287: 115815.</p>
+              <a class="doi-link" href="https://doi.org/10.1016/j.oceaneng.2023.115815" target="_blank" rel="noopener noreferrer">DOI ↗</a>
+            </article>
+          </li>
+          <li class="publication-item reveal">
+            <article>
+              <div class="publication-meta"><time datetime="2023">2023</time><span>Energy</span></div>
+              <p><strong>Guixun Zhu</strong>, John Samuel, Siming Zheng, Jason Hughes, David Simmonds, Deborah Greaves. Numerical investigation on the hydrodynamic performance of a 2D U-shaped Oscillating Water Column wave energy converter. <em>Energy</em>, 274: 127357.</p>
+              <a class="doi-link" href="https://doi.org/10.1016/j.energy.2023.127357" target="_blank" rel="noopener noreferrer">DOI ↗</a>
+            </article>
+          </li>
+          <li class="publication-item is-extra reveal">
+            <article>
+              <div class="publication-meta"><time datetime="2023">2023</time><span>CPC</span></div>
+              <p><strong>Guixun Zhu</strong>, Jason Hughes, Siming Zheng, Deborah Greaves. A novel MPI-based parallel smoothed particle hydrodynamics framework with dynamic load balancing for free surface flow. <em>Computer Physics Communications</em>, 284: 108608.</p>
+              <a class="doi-link" href="https://doi.org/10.1016/j.cpc.2022.108608" target="_blank" rel="noopener noreferrer">DOI ↗</a>
+            </article>
+          </li>
+          <li class="publication-item is-extra reveal">
+            <article>
+              <div class="publication-meta"><time datetime="2020">2020</time><span>Ocean Engineering</span></div>
+              <p><strong>Guixun Zhu</strong>, David Graham, Siming Zheng, Jason Hughes, Deborah Greaves. Hydrodynamics of onshore oscillating water column devices: A numerical study using smoothed particle hydrodynamics. <em>Ocean Engineering</em>, 218: 108226.</p>
+              <a class="doi-link" href="https://doi.org/10.1016/j.oceaneng.2020.108226" target="_blank" rel="noopener noreferrer">DOI ↗</a>
+            </article>
+          </li>
+          <li class="publication-item is-extra reveal">
+            <article>
+              <div class="publication-meta"><time datetime="2020">2020</time><span>JFM</span></div>
+              <p>Siming Zheng, Michael H. Meylan, <strong>Guixun Zhu</strong>, Deborah Greaves, Gregorio Iglesias. Hydroelastic interaction between water waves and an array of circular floating porous elastic plates. <em>Journal of Fluid Mechanics</em>, 900: A20.</p>
+              <a class="doi-link" href="https://doi.org/10.1017/jfm.2020.508" target="_blank" rel="noopener noreferrer">DOI ↗</a>
+            </article>
+          </li>
+          <li class="publication-item is-extra reveal">
+            <article>
+              <div class="publication-meta"><time datetime="2020">2020</time><span>IJNMF</span></div>
+              <p><strong>Guixun Zhu</strong>, Li Zou. An integrated smoothed particle hydrodynamics model for complex interfacial flows with large density ratios. <em>International Journal for Numerical Methods in Fluids</em>, 92(8): 950–975.</p>
+              <a class="doi-link" href="https://doi.org/10.1002/fld.4813" target="_blank" rel="noopener noreferrer">DOI ↗</a>
+            </article>
+          </li>
+          <li class="publication-item is-extra reveal">
+            <article>
+              <div class="publication-meta"><time datetime="2020">2020</time><span>AOR</span></div>
+              <p>Siming Zheng, Alessandro Antonini, Yongliang Zhang, Jon Miles, Deborah Greaves, <strong>Guixun Zhu</strong>, Gregorio Iglesias. Hydrodynamic performance of a multi-Oscillating Water Column (OWC) platform. <em>Applied Ocean Research</em>, 99: 102168.</p>
+              <a class="doi-link" href="https://doi.org/10.1016/j.apor.2020.102168" target="_blank" rel="noopener noreferrer">DOI ↗</a>
+            </article>
+          </li>
+          <li class="publication-item is-extra reveal">
+            <article>
+              <div class="publication-meta"><time datetime="2020">2020</time><span>Renewable Energy</span></div>
+              <p>Siming Zheng, <strong>Guixun Zhu</strong>, David Simmonds, Deborah Greaves, Gregorio Iglesias. Wave power extraction from a tubular structure integrated oscillating water column. <em>Renewable Energy</em>, 150: 342–355.</p>
+              <a class="doi-link" href="https://doi.org/10.1016/j.renene.2020.01.008" target="_blank" rel="noopener noreferrer">DOI ↗</a>
+            </article>
+          </li>
+          <li class="publication-item is-extra reveal">
+            <article>
+              <div class="publication-meta"><time datetime="2018">2018</time><span>IJNMF</span></div>
+              <p><strong>Guixun Zhu</strong>, Li Zou, Zhen Chen, A. M. Wang, Moubin Liu. An improved SPH model for multiphase flows with large density ratios. <em>International Journal for Numerical Methods in Fluids</em>, 86(2): 167–184.</p>
+              <a class="doi-link" href="https://doi.org/10.1002/fld.4412" target="_blank" rel="noopener noreferrer">DOI ↗</a>
+            </article>
+          </li>
+          <li class="publication-item is-extra reveal">
+            <article>
+              <div class="publication-meta"><time datetime="2021">2021</time><span>ISOPE</span></div>
+              <p><strong>Guixun Zhu</strong>, Jason Hughes, Siming Zheng, Deborah Greaves. A SPH Model with Open Relaxation Boundary for Wave Generation and Absorption. <em>The 31st International Ocean and Polar Engineering Conference</em>, 1612–1617.</p>
+            </article>
+          </li>
+          <li class="publication-item is-extra reveal">
+            <article>
+              <div class="publication-meta"><time datetime="2021">2021</time><span>EWTEC</span></div>
+              <p><strong>Guixun Zhu</strong>, Jason Hughes, Siming Zheng, Deborah Greaves. Investigation of the hydrodynamic performance of an oscillating water column wave energy device using a smoothed particle hydrodynamics model. <em>The 14th European Wave and Tidal Energy Conference</em>, Plymouth, UK.</p>
+            </article>
+          </li>
+        </ol>
+
+        <div class="publication-actions reveal">
+          <button class="button button-secondary publication-toggle" id="publications-toggle" type="button" aria-expanded="false">
+            <span class="show-label"><span class="lang-zh">显示全部论文</span><span class="lang-en">Show all publications</span></span>
+            <span class="hide-label"><span class="lang-zh">收起论文列表</span><span class="lang-en">Show fewer</span></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tinted" id="projects">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-kicker">04 · PROJECTS</p>
+          <h2><span class="lang-zh">科研项目</span><span class="lang-en">Research projects</span></h2>
+          <p class="lang-zh">围绕数值方法、海洋可再生能源装备和极端环境生还能力开展研究。</p>
+          <p class="lang-en">Projects spanning numerical methods, marine renewable energy devices and survivability in extreme environments.</p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-topline"><time>2026—2029</time><span class="role-badge"><span class="lang-zh">主持</span><span class="lang-en">PI</span></span></div>
+            <h3><span class="lang-zh">辽宁省“兴辽英才”博士后项目</span><span class="lang-en">Liaoning “Xingliao Talent” Postdoctoral Project</span></h3>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-topline"><time>2026—2029</time><span class="role-badge"><span class="lang-zh">主持</span><span class="lang-en">PI</span></span></div>
+            <h3><span class="lang-zh">中央高校基本科研业务费项目</span><span class="lang-en">Fundamental Research Funds for the Central Universities</span></h3>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-topline"><time>2025—2028</time><span class="role-badge role-secondary"><span class="lang-zh">参与</span><span class="lang-en">Participant</span></span></div>
+            <h3><span class="lang-zh">中国—新加坡清洁能源旗舰合作项目</span><span class="lang-en">China–Singapore Clean Energy Flagship Cooperation Project</span></h3>
+            <p class="lang-zh">“新型浮式潮流能—波浪能混合系统研发与示范”</p>
+            <p class="lang-en">R&amp;D and demonstration of a novel floating tidal–wave hybrid energy system.</p>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-topline"><span class="project-status"><span class="lang-zh">已参与项目</span><span class="lang-en">Previous project</span></span><span class="role-badge role-secondary"><span class="lang-zh">参与</span><span class="lang-en">Participant</span></span></div>
+            <h3><span class="lang-zh">新加坡海洋工程项目</span><span class="lang-en">Singapore marine engineering programme</span></h3>
+            <p class="lang-zh">“极端环境下海洋系统生产效率、完整性与生存能力提升”</p>
+            <p class="lang-en">Enhancing productivity, integrity and survivability of marine systems in extreme environments.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="mentoring">
+      <div class="container mentoring-layout">
+        <div class="section-heading reveal">
+          <p class="section-kicker">05 · MENTORING</p>
+          <h2><span class="lang-zh">人才培养</span><span class="lang-en">Mentoring</span></h2>
+          <p class="lang-zh">关注科研思维、独立能力和长期成长，在平等、指导、合作与交流中推进研究。</p>
+          <p class="lang-en">Developing research judgement, independence and long-term capability through equality, guidance, collaboration and communication.</p>
+        </div>
+
+        <div class="mentoring-grid">
+          <article class="mentoring-quote reveal">
+            <blockquote>“君子不器”</blockquote>
+            <p class="lang-zh">不把学生限制在单一工具或单一任务中，重视问题意识、方法迁移和完整科研能力。</p>
+            <p class="lang-en">Students are encouraged to grow beyond a single tool or task, with emphasis on problem formulation, transferable methods and complete research capability.</p>
+          </article>
+
+          <div class="principles reveal">
+            <article>
+              <span aria-hidden="true">01</span>
+              <div><h3><span class="lang-zh">科研思维训练</span><span class="lang-en">Research thinking</span></h3><p class="lang-zh">从现象、机理、模型到验证，建立完整的问题分析链条。</p><p class="lang-en">Build a complete reasoning chain from observation and mechanism to modelling and validation.</p></div>
+            </article>
+            <article>
+              <span aria-hidden="true">02</span>
+              <div><h3><span class="lang-zh">平等与合作</span><span class="lang-en">Equality and collaboration</span></h3><p class="lang-zh">通过定期交流、共同讨论和清晰反馈推进研究。</p><p class="lang-en">Progress through regular discussion, shared problem solving and clear feedback.</p></div>
+            </article>
+            <article>
+              <span aria-hidden="true">03</span>
+              <div><h3><span class="lang-zh">国内外交流</span><span class="lang-en">Academic exchange</span></h3><p class="lang-zh">根据项目契合度与学生表现，积极支持国内外合作交流与推荐。</p><p class="lang-en">Support domestic and international exchange and recommendations according to project fit and student development.</p></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="recruitment-banner reveal">
+          <div>
+            <p class="section-kicker">JOIN THE TEAM</p>
+            <h3><span class="lang-zh">欢迎对计算海洋水动力学、海洋可再生能源和物理智能感兴趣的学生与合作者联系。</span><span class="lang-en">Students and collaborators interested in computational marine hydrodynamics, marine renewable energy and physics-guided intelligence are welcome.</span></h3>
+          </div>
+          <a class="button button-primary" href="#contact"><span class="lang-zh">联系与合作</span><span class="lang-en">Contact & collaborate</span><span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container contact-layout">
+        <div class="contact-copy reveal">
+          <p class="section-kicker">06 · CONTACT</p>
+          <h2><span class="lang-zh">联系与合作</span><span class="lang-en">Contact</span></h2>
+          <p class="lang-zh">欢迎围绕数值方法、海洋能源装备、极端海况与智能预测控制开展学术交流和合作。</p>
+          <p class="lang-en">Open to academic exchange and collaboration on numerical methods, marine energy systems, extreme environments and intelligent prediction and control.</p>
+        </div>
+
+        <div class="contact-cards reveal">
+          <div class="contact-card contact-card-static">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V9l7-4 7 4v12M9 21v-6h6v6"></path></svg>
+            <div>
+              <span class="contact-label"><span class="lang-zh">所在单位</span><span class="lang-en">Affiliation</span></span>
+              <strong class="lang-zh" data-affiliation-zh>大连理工大学船舶工程学院</strong>
+              <strong class="lang-en" data-affiliation-en>School of Naval Architecture and Ocean Engineering, Dalian University of Technology</strong>
+            </div>
+          </div>
+
+          <a class="contact-card" data-contact="email" href="#" hidden>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4zM4 7l8 6 8-6"></path></svg>
+            <div><span class="contact-label">Email</span><strong data-contact-value></strong></div>
+          </a>
+
+          <a class="contact-card" data-contact="github" href="#" target="_blank" rel="noopener noreferrer" hidden>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.3-.4 6.8-1.6 6.8-7A5.4 5.4 0 0 0 19.4 4 5 5 0 0 0 19.3.5S18.2.1 15 1.8a13.4 13.4 0 0 0-7 0C4.8.1 3.7.5 3.7.5A5 5 0 0 0 3.6 4a5.4 5.4 0 0 0-1.4 3.7c0 5.4 3.5 6.6 6.8 7A4.8 4.8 0 0 0 8 18v4M8 19c-3 .9-3-1.5-4-2"></path></svg>
+            <div><span class="contact-label">GitHub</span><strong data-contact-value></strong></div>
+          </a>
+
+          <a class="contact-card" data-contact="scholar" href="#" target="_blank" rel="noopener noreferrer" hidden>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2 10 10-5 10 5-10 5zM6 12v5c3 2 9 2 12 0v-5"></path></svg>
+            <div><span class="contact-label">Google Scholar</span><strong><span class="lang-zh">学术主页</span><span class="lang-en">Academic profile</span></strong></div>
+          </a>
+
+          <a class="contact-card" data-contact="orcid" href="#" target="_blank" rel="noopener noreferrer" hidden>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M8 8v8M8 6.5h.01M11 8h3a4 4 0 0 1 0 8h-3z"></path></svg>
+            <div><span class="contact-label">ORCID</span><strong data-contact-value></strong></div>
+          </a>
+
+          <a class="contact-card" data-contact="researchgate" href="#" target="_blank" rel="noopener noreferrer" hidden>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M8 16V8h4a3 3 0 0 1 0 6H8M13 14l3 2"></path></svg>
+            <div><span class="contact-label">ResearchGate</span><strong><span class="lang-zh">研究主页</span><span class="lang-en">Research profile</span></strong></div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>朱贵勋 · Guixun Zhu</strong>
+        <p><span class="lang-zh">计算海洋水动力学与海洋可再生能源</span><span class="lang-en">Computational Marine Hydrodynamics & Marine Renewable Energy</span></p>
+      </div>
+      <p>© <span id="current-year">2026</span> Guixun Zhu · Hosted on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
+
+  <script defer src="assets/js/site-config.js"></script>
+  <script defer src="assets/js/main.js"></script>
+</body>
+</html>
